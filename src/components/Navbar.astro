@@ -1,0 +1,23 @@
+---
+import Hamburger from "./Hamburger.astro";
+const portfolio = import.meta.env.PUBLIC_PORTFOLIO;
+---
+
+<header class="bg-gray-800 text-white shadow fixed inset-x-0 z-50">
+	<div class="container mx-auto px-4 py-4 flex items-center justify-between">
+		<h1 class="text-xl font-bold">
+			<a href="/" class="hover:text-gray-300">Dhruv Blogs</a>
+		</h1>
+
+		<button aria-label="Toggle Menu" class="md:hidden block">
+			<Hamburger />
+		</button>
+
+		<nav class="hidden md:flex space-x-6 font-medium">
+			<a href="/" class="hover:underline">Home</a>
+			<a href={portfolio} target="_blank" class="hover:underline">Portfolio</a>
+			<a href="/blogs" class="hover:underline">Blogs</a>
+			<a href="/contact" class="hover:underline">Contact</a>
+		</nav>
+	</div>
+</header>

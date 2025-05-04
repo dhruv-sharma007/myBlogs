@@ -1,0 +1,9 @@
+---
+const { href, name, target = "_parent" } = Astro.props;
+---
+
+<div>
+	<a href={href} target={target} class="hover:underline btn btn-primary w-[12rem] rounded-[5px]"
+		>{name}</a
+	>
+</div>
