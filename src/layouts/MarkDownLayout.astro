@@ -1,5 +1,6 @@
 ---
 import DefaultLayout from "./DefaultLayout.astro";
+import Tag from "../components/Tag.astro";
 const { frontmatter } = Astro.props;
 ---
 
@@ -18,16 +19,27 @@ const { frontmatter } = Astro.props;
 			<img
 				src={frontmatter.image.url}
 				alt={frontmatter.image.alt}
-				class="rounded-xl shadow-xl w-full max-w-6xl h-120 object-cover transition-transform duration-300 hover:scale-105"
+				class="rounded-xl shadow-xl w-full max-w-6xl max-h-120 object-cover transition-transform duration-300 hover:scale-105"
 			/>
 		</div>
 
 		<p
-			class="text-center text-lg text-gray-600 dark:text-gray-300 mb-10 max-w-3xl mx-auto italic">
+			class="text-center text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto italic">
 			{frontmatter.description}
+
+			<ul class="flex flex-wrap gap-2 py-2 justify-center mb-10">
+				{
+					frontmatter.tags.map((tag: any) => (
+						<li>
+							<Tag tag={tag} />
+						</li>
+					))
+				}
+			</ul>
 		</p>
 
-		<article class="prose dark:prose-invert max-w-none leading-relaxed text-[1.4rem]">
+		<article
+			class="prose dark:prose-invert max-w-none leading-relaxed text-[1.4rem]">
 			<slot />
 		</article>
 	</section>

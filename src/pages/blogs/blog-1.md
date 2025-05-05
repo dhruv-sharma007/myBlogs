@@ -6,7 +6,7 @@ description: "Sometimes being surrounded by people feels lonelier than being on 
 image: 
   url: "https://static.vecteezy.com/system/resources/thumbnails/014/323/919/small_2x/silhouette-of-sad-man-sitting-alone-on-top-of-a-mountain-at-sunset-depression-and-loneliness-the-concept-of-stress-and-gloom-photo.jpg"
   alt: "Alone boy pic"
-tags: [loneliness, reflection, mental health]
+tags: ["loneliness", "reflection", "mental health"]
 ---
 
 > “Loneliness expresses the pain of being alone  

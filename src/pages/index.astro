@@ -6,7 +6,6 @@ const allPosts = Object.values(
 	import.meta.glob("./blogs/*.md", { eager: true })
 );
 const latestPosts = allPosts.slice(-4);
-console.log(latestPosts);
 ---
 
 <DefaultLayout title="My Blog Website">

@@ -19,6 +19,7 @@ const allPosts = Object.values(
           image={post.frontmatter.image}
           date={post.frontmatter.pubDate}
           url={post.url}
+          tags={post.frontmatter.tags}
         />
       ))}
     </div>

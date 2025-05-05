@@ -3,5 +3,70 @@ import DefaultLayout from "../layouts/DefaultLayout.astro";
 ---
 
 <DefaultLayout>
-	<h1 class="text-center">This page is under construction</h1>
+	<section
+		class="max-w-xl mx-auto my-10 p-6 bg-white dark:bg-gray-900 rounded-lg shadow-md">
+		<h2 class="text-2xl font-bold mb-6 text-gray-800 dark:text-white">
+			Contact Me
+		</h2>
+
+		<form
+			action="https://formspree.io/f/xdkggabk"
+			method="POST"
+			class="space-y-5">
+			<div>
+				<label
+					class="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-300"
+					>Your Name</label
+				>
+				<input
+					type="text"
+					name="name"
+					required
+					class="w-full input input-bordered"
+				/>
+			</div>
+
+			<div>
+				<label
+					class="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-300"
+					>Your Email</label
+				>
+				<input
+					type="email"
+					name="email"
+					required
+					class="w-full input input-bordered"
+				/>
+			</div>
+
+			<div>
+				<label
+					class="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-300"
+					>Mobile Number</label
+				>
+				<input
+					type="tel"
+					name="number"
+					required
+					class="w-full input input-bordered"
+				/>
+			</div>
+
+			<div>
+				<label
+					class="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-300"
+					>Message</label
+				>
+				<textarea
+					name="message"
+					required
+					rows="4"
+					class="w-full textarea textarea-bordered"></textarea>
+			</div>
+
+			<div class="text-right">
+				<button type="submit" class="btn btn-primary px-6">Send</button>
+			</div>
+		</form>
+	</section>
 </DefaultLayout>
